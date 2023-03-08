@@ -1,0 +1,283 @@
+body {
+    background: #ddd;
+    margin-top: 10px;
+}
+
+#esperando {
+    margin: 1em 0 0 0;
+    scroll-margin-bottom: 50px;
+}
+
+.chat-box {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden
+}
+
+.chats {
+    padding: 30px 15px
+}
+
+.chat-avatar {
+    float: right
+}
+
+.chat-avatar .avatar {
+    width: 30px -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.chat-body {
+    display: block;
+    margin:  0;
+    overflow: hidden
+}
+
+.chat-body:first-child {
+    margin-top: 0
+}
+
+.chat-content {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 8px 15px;
+    margin: 0 20px 10px 0;
+    clear: both;
+    color: #fff;
+    background-color: #62a8ea;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+}
+
+.chat-content:before {
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    width: 0;
+    height: 0;
+    content: '';
+    border: 5px solid transparent;
+    border-left-color: #62a8ea
+}
+
+.chat-content>p:last-child {
+    margin-bottom: 0
+}
+
+.chat-content+.chat-content:before {
+    border-color: transparent
+}
+
+.chat-time {
+    display: block;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, .6)
+}
+
+.chat-left .chat-avatar {
+    float: left
+}
+
+.chat-left .chat-body {
+    margin-right: 0;
+    margin-left: 30px
+}
+
+.chat-left .chat-content {
+    float: left;
+    margin: 0 0 10px 20px;
+    color: #76838f;
+    background-color: #dfe9ef
+}
+
+.chat-left .chat-content:before {
+    right: auto;
+    left: -10px;
+    border-right-color: #dfe9ef;
+    border-left-color: transparent
+}
+
+.chat-left .chat-content+.chat-content:before {
+    border-color: transparent
+}
+
+.chat-left .chat-time {
+    color: #a3afb7
+}
+
+.panel-footer {
+    padding: 0 30px 15px;
+    background-color: transparent;
+    border-top: 1px solid transparent;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.avatar img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 0 none;
+    border-radius: 1000px;
+}
+
+.chat-avatar .avatar {
+    width: 30px;
+}
+
+.avatar {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    white-space: nowrap;
+    border-radius: 1000px;
+    vertical-align: bottom;
+}
+
+
+
+
+#opcionesdiv {
+    animation-duration: 0.3s;
+    /* the duration of the animation */
+    animation-timing-function: ease-out;
+    /* how the animation will behave */
+    animation-delay: 0s;
+    /* how long to delay the animation from starting */
+    animation-iteration-count: 1;
+    /* how many times the animation will play */
+    animation-name: aparecer;
+    /* the name of the animation we defined above */
+}
+
+#opciones {
+    list-style-type: none;
+    padding: 1em;
+    border-radius: 25px;
+    width: 100%;
+    margin: 0.5em auto 0 auto;
+    text-align: center;
+    background-color: rgb(36, 48, 52);
+}
+
+#opcionestit {
+    scroll-margin-top: 100px;
+    margin: 3em auto 1em auto;
+    text-align: center;
+    z-index: 2;
+    -webkit-animation: rotationx 3s infinite ease-out;
+    animation-delay: 1s;
+}
+
+#opcionestit span {
+    padding: 0.5em;
+    margin: 0;
+    text-align: center;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+
+#opciones li {
+    display: inline-block;
+    margin: 0.5em;
+    text-align: center;
+}
+
+#opciones button {
+    background-color: rgb(31, 157, 199);
+    border-radius: 25px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 0.7em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 700;
+    width: 100%;
+    margin: 0;
+    display: block;
+    font-family: 'Fira Sans', sans-serif;
+
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.3s;
+}
+
+#opciones button:hover {
+    background-color: #11576e;
+}
+
+#opciones button:active {
+    background-color: #11576e;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+@media only screen and (max-width: 500px) {
+    #opciones {
+        padding: 0.5em;
+    }
+
+    #opciones li {
+        display: block;
+        margin: 0 0 1em 0;
+    }
+
+    #opciones li:nth-last-child(1) {
+        display: block;
+        margin: 0 0 0 0;
+    }
+
+}
+
+
+    
+@keyframes aparecer{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+
+    
+    @keyframes typing{
+    0%{
+        background-color: rgba(132, 130, 21, 0.4);
+        box-shadow: 1.1rem 0 0 0 rgba(160, 167, 33, 0.2),
+        2.2rem 0 0 0 rgb(238, 255, 52);
+    }
+    25%{
+        background-color:rgba(132, 130, 21, 0.4);
+        box-shadow: 1.1rem 0 0 0 rgba(160, 167, 33, 0.2),
+        2.2rem 0 0 0 rgb(238, 255, 52);
+    }
+    75%{ background-color: rgba(132, 130, 21, 0.4);
+        box-shadow: 1.1rem 0 0 0 rgba(160, 167, 33, 0.2),
+        2.2rem 0 0 0 rgb(238, 255, 52);
+    }
+}
+
+
+
+#typing-loader{
+    display:inline-block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      animation: typing 1s linear infinite alternate;
+      position: relative;
+      left: -2rem;
+      margin: 0.6em 0 0 2em;
+  }

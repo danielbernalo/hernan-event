@@ -1,0 +1,90 @@
+{
+	"location": {
+		"messages": [
+			"El local se llama: Quinta Navarro",
+			"La dirección es:",
+			"Calle 46 entre 25 y 27 nro:1269, Navarro, Provincia de Buenos Aires",
+			"<a href=\"https://goo.gl/maps/9nhEQsSxWWwoZwWd9\" target=\"_blank\" class=\"btn btn-custom mt30 popup-gmaps\">Ver en mapa</a>"
+		],
+		"options": [
+			"<li><button type=\"button\" onClick=\"startAudio();showReply('vestimenta')\">Código de vestimenta</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();showReply('countdown')\">Cuanto falta para el evento</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();showReply('rsvp')\">Quiero confirmar mi asistencia!</button></li>"
+		]
+	},
+	"vestimenta": {
+		"messages": [
+			"El código de vestimenta es:",
+			"Outfit Rosado o Azul dependiendo si eres TEAM niño o niña. (Puede ser remera, accesorio, prenda, etc)"
+		],
+		"options": [
+			"<li><button type=\"button\" onClick=\"startAudio();showReply('location')\">Como llegar?</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();showReply('countdown')\">Cuanto falta para el evento</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();showReply('rsvp')\">Quiero confirmar mi asistencia!</button></li>"
+
+		]
+	},
+	"countdown": {
+		"messages": [
+			"El evento está programado para el 25 de marzo del 2023 a las 14:00 y la revelacion de sexo sera a las 18:00 puntual",
+			"He generado un invite por ti, para recordarte dias antes.",
+			"<a target='_blank' href='https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NWtlOWZlbnRhcnA0Ym1ncTg3YTRybWNoNzAgaGVybmFubWNrb29sQG0&amp;tmsrc=hernanmckool%40gmail.com'><img border='0' src='https://www.google.com/calendar/images/ext/gc_button1_es.gif' class=\"btn btn-custom mt30 popup-gmaps\">Abrir Calendar</a>"
+		],
+		"options": [
+			"<li><button type=\"button\" onClick=\"startAudio();showReply('vestimenta')\">Código de vestimenta</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();showReply('location')\">Como llegar?</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();showReply('rsvp')\">Quiero confirmar mi asistencia!</button></li>"
+		]
+	},
+	"rsvp": {
+		"messages": [
+			"Ok, buen punto",
+			"Me dices tu nombre y apellido"
+		],
+		"options": [
+			"<li><input type=\"text\" id=\"name\" name=\"name\" placeholder=\"<Ingresa tu nombre y apellido>\" class=\"entradatexto\"></li>",
+			"<li><button type=\"button\" class=\"enviaentradatexto\" onClick=\"sendText('name', 'Compañeros')\">Enviar</button></li>"
+		]
+	},
+
+	"Compañeros": {
+		"messages": [
+			"Necesitamos organizarnos, por eso te voy a pedir algunos datos.",
+			"Puedes decirme cuantos adultos y/o niños vienen contigo?",
+			"...tranquilo esto es confidencial 😊",
+			"Cuantos adultos?"
+		],
+		"options": [
+			"<li><button type=\"button\" onClick=\"startAudio();sendReply('adultos', '0')\">Ninguno</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();sendReply('adultos', '1')\">Uno (1) \uD83E\uDD73</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();sendReply('adultos', '2')\">Dos (2) \uD83D\uDE06</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();sendReply('adultos', '3')\">Tres (3) \uD83D\uDE05</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();sendReply('adultos', '4')\">Cuatro (4) \uD83E\uDD2F</button></li>"
+		]
+
+	},
+	"ninios": {
+		"messages": [
+			"Cuantos niños?"
+		],
+		"options": [
+			"<li><button type=\"button\" onClick=\"startAudio();sendReply('ninios', '0')\">Ninguno</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();sendReply('ninios', '1')\">Uno (1) \uD83E\uDD73</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();sendReply('ninios', '2')\">Dos (2) \uD83D\uDE06</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();sendReply('ninios', '3')\">Tres (3) \uD83D\uDE05</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();sendReply('ninios', '4')\">Cuatro (4) \uD83E\uDD2F</button></li>"
+		]
+
+	},
+	"finishing": {
+		"messages": [
+			"Listo! ya te registramos",
+			"Nos vemos el dia del evento, vamos a estar cerca de la chopera de birras!",
+			"🍻"
+		],
+		"options": [
+			"<li><button type=\"button\" onClick=\"startAudio();showReply('Vestimenta')\">Código de vestimenta</button></li>",
+			"<li><button type=\"button\" onClick=\"startAudio();showReply('countdown')\">Cuanto falta para el evento</button></li>"
+		]
+	}
+}
